@@ -1,263 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pocket Pal - Privacy Policy</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
-        .effective-date {
-            color: #7f8c8d;
-            font-style: italic;
-        }
-        .highlight {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin: 10px 0;
-        }
-        .contact {
-            background-color: #e8f4f8;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — PocketPal</title>
+<meta name="description" content="How PocketPal collects, encrypts, stores, and protects your financial data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6FBF9;
+    --surface:#FFFFFF;
+    --surface-2:#EFFBF7;
+    --ink:#0B2A28;
+    --ink-soft:#4C6764;
+    --ink-faint:#7C948F;
+    --teal-900:#073B36;
+    --teal-800:#0B5D53;
+    --teal-700:#0F766E;
+    --teal-500:#14B8A6;
+    --teal-300:#7EE8D4;
+    --mint-100:#E3F8F1;
+    --amber-50:#FFF7E6;
+    --amber-400:#F1A614;
+    --amber-700:#8A5A05;
+    --border:#DCEFEA;
+    --shadow: 0 1px 2px rgba(7,59,54,0.04), 0 8px 24px -12px rgba(7,59,54,0.15);
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --radius-sm: 10px;
+    --maxw: 920px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Manrope','Inter',sans-serif;
+    color:var(--teal-900);
+    line-height:1.2;
+    margin:0 0 12px;
+  }
+
+  a{color:var(--teal-800); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible, .chip:focus-visible{
+    outline:2px solid var(--teal-500);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background:var(--teal-800); color:#fff; padding:10px 16px; border-radius:8px; z-index:100;
+  }
+  .skip-link:focus{ left:16px; top:16px; }
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(246,251,249,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  header.site.scrolled{
+    border-bottom-color:var(--border);
+    box-shadow:0 2px 16px -8px rgba(7,59,54,0.15);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto; padding:14px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-weight:800; color:var(--teal-900); font-size:17px;}
+  .logo{width:34px; height:34px; flex:none; display:block; object-fit:contain; border-radius:9px;}
+  .logo-sm{width:26px; height:26px;}
+  .nav-links{display:flex; gap:22px; font-size:14px; font-weight:600;}
+  .nav-links a{color:var(--ink-soft);}
+  .nav-links a.current{color:var(--teal-800);}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 40px; position:relative; overflow:hidden;}
+  .hero-inner{max-width:var(--maxw); margin:0 auto; padding:0 24px; display:grid; grid-template-columns:1.3fr 0.8fr; gap:40px; align-items:center;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--teal-700); background:var(--mint-100); border:1px solid var(--teal-300);
+    padding:6px 12px; border-radius:999px; margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(30px,4vw,44px); font-weight:800; max-width:14ch;}
+  .hero p.lede{font-size:17.5px; color:var(--ink-soft); max-width:52ch; margin:14px 0 22px;}
+  .meta-pills{display:flex; flex-wrap:wrap; gap:10px;}
+  .pill{
+    font-size:13px; color:var(--ink-soft); background:var(--surface);
+    border:1px solid var(--border); padding:7px 14px; border-radius:999px;
+  }
+  .pill strong{color:var(--teal-900);}
+
+  .hero-art{display:flex; align-items:center; justify-content:center; position:relative;}
+  .hero-art .ring{
+    position:absolute; border-radius:50%; border:1.5px solid var(--teal-300); opacity:.55;
+  }
+  .hero-art .ring.r1{width:150px; height:150px; animation:pulse 3.6s ease-out infinite;}
+  .hero-art .ring.r2{width:150px; height:150px; animation:pulse 3.6s ease-out infinite 1.2s;}
+  .hero-art .ring.r3{width:150px; height:150px; animation:pulse 3.6s ease-out infinite 2.4s;}
+  @keyframes pulse{
+    0%{transform:scale(0.7); opacity:.55;}
+    100%{transform:scale(2.1); opacity:0;}
+  }
+  .hero-art svg.badge{width:96px; height:96px; position:relative; z-index:1;}
+
+  /* ---------- Chip nav (table of contents) ---------- */
+  nav.toc{padding:6px 0 8px;}
+  .toc-scroll{
+    display:flex; gap:10px; overflow-x:auto; padding:4px 24px 14px;
+    max-width:var(--maxw); margin:0 auto; scrollbar-width:none;
+  }
+  .toc-scroll::-webkit-scrollbar{display:none;}
+  .chip{
+    flex:none; font-size:13.5px; font-weight:600; color:var(--teal-800);
+    background:var(--surface); border:1px solid var(--border);
+    padding:9px 16px; border-radius:999px; white-space:nowrap; transition:.2s ease;
+  }
+  .chip:hover{border-color:var(--teal-500); text-decoration:none;}
+  .chip.active{background:var(--teal-800); border-color:var(--teal-800); color:#fff;}
+
+  /* ---------- Glance grid ---------- */
+  section.glance{padding:12px 0 8px;}
+  .glance-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:14px; margin-top:6px;
+  }
+  .glance-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+    padding:20px; box-shadow:var(--shadow);
+  }
+  .glance-card .icn{
+    width:38px; height:38px; border-radius:10px; background:var(--mint-100);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px; color:var(--teal-700);
+  }
+  .glance-card h3{font-size:15.5px; margin-bottom:6px;}
+  .glance-card p{font-size:14px; color:var(--ink-soft); margin:0;}
+
+  /* ---------- Sections ---------- */
+  main{padding:20px 0 40px;}
+  section.block{padding:52px 0; border-top:1px solid var(--border);}
+  section.block:first-of-type{border-top:none;}
+  .block-eyebrow{
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--teal-700); margin-bottom:10px; display:block;
+  }
+  section.block h2{font-size:26px; font-weight:800; margin-bottom:6px;}
+  section.block > .wrap > p.section-intro{color:var(--ink-soft); font-size:16px; max-width:64ch; margin-bottom:28px;}
+
+  .card{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+    padding:22px 24px; margin-bottom:16px; box-shadow:var(--shadow);
+  }
+  .card h3{font-size:16.5px; display:flex; align-items:center; gap:10px; margin-bottom:8px;}
+  .card h3 .icn-sm{width:26px; height:26px; border-radius:8px; background:var(--mint-100); color:var(--teal-700); display:flex; align-items:center; justify-content:center; flex:none;}
+  .card p{color:var(--ink-soft); margin:0 0 8px; font-size:15px;}
+  .card p:last-child{margin-bottom:0;}
+  .card ul{margin:8px 0 0; padding-left:20px; color:var(--ink-soft); font-size:15px;}
+  .card li{margin:4px 0;}
+
+  .checklist{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-top:18px;
+  }
+  .check-item{
+    display:flex; align-items:flex-start; gap:10px; background:var(--surface);
+    border:1px solid var(--border); border-radius:var(--radius-sm); padding:12px 14px; font-size:14.5px;
+  }
+  .check-item svg{flex:none; margin-top:2px; color:var(--teal-700);}
+
+  .callout{
+    display:flex; gap:14px; background:var(--amber-50); border:1px solid #F3D999;
+    border-radius:var(--radius-md); padding:18px 20px; margin:20px 0;
+  }
+  .callout .icn{color:var(--amber-700); flex:none;}
+  .callout p{margin:0; color:var(--amber-700); font-size:14.5px; line-height:1.6;}
+  .callout strong{color:#6E4404;}
+
+  .partner-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin-top:8px;}
+  .partner-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+    padding:20px; box-shadow:var(--shadow);
+  }
+  .partner-card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    color:var(--teal-700); background:var(--mint-100); padding:3px 9px; border-radius:6px; margin-bottom:10px;
+  }
+  .partner-card h4{margin:0 0 6px; font-size:16px; font-family:'Manrope',sans-serif; color:var(--teal-900); font-weight:700;}
+  .partner-card p{margin:0 0 6px; font-size:14px; color:var(--ink-soft);}
+  .partner-card a{font-size:13.5px; font-weight:600;}
+
+  .contact-card{
+    background:linear-gradient(135deg,var(--teal-800),var(--teal-700));
+    border-radius:var(--radius-lg); padding:32px; color:#fff;
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .contact-card h3{color:#fff; margin-bottom:6px; font-size:20px;}
+  .contact-card p{color:rgba(255,255,255,0.85); margin:0; font-size:14.5px;}
+  .contact-card .btn{
+    background:#fff; color:var(--teal-800); font-weight:700; padding:12px 22px;
+    border-radius:999px; font-size:14.5px; white-space:nowrap;
+  }
+  .contact-card .btn:hover{text-decoration:none; opacity:.92;}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--border); padding:36px 0 40px; background:var(--surface-2);}
+  .footer-inner{
+    max-width:var(--maxw); margin:0 auto; padding:0 24px;
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .footer-brand{display:flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-weight:800; color:var(--teal-900);}
+  .footer-links{display:flex; gap:18px; font-size:13.5px; font-weight:600;}
+  .footer-fine{width:100%; margin-top:18px; font-size:13px; color:var(--ink-faint); text-align:center;}
+
+  .back-to-top{
+    position:fixed; right:20px; bottom:20px; width:44px; height:44px; border-radius:50%;
+    background:var(--teal-800); color:#fff; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px -6px rgba(7,59,54,0.45); opacity:0; pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease; z-index:50;
+  }
+  .back-to-top.show{opacity:1; pointer-events:auto;}
+  .back-to-top:hover{transform:translateY(-2px); text-decoration:none;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:800px){
+    .hero-inner{grid-template-columns:1fr; text-align:left;}
+    .hero-art{order:-1; margin-bottom:8px; height:150px;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:480px){
+    .wrap, .nav-inner, .hero-inner, .footer-inner{padding-left:18px; padding-right:18px;}
+    section.block{padding:40px 0;}
+    .contact-card{flex-direction:column; align-items:flex-start;}
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy for Pocket Pal</h1>
-        <p class="effective-date">Effective Date: January 30, 2026</p>
-        <p class="effective-date">Last Updated: January 30, 2026</p>
+<a href="#main" class="skip-link">Skip to content</a>
 
-        <div class="highlight">
-            <strong>TL;DR (Too Long; Didn't Read):</strong>
-            <ul>
-                <li>Your data is encrypted end-to-end - only you can access it</li>
-                <li>We never sell or share your personal information</li>
-                <li>Data is stored on your device and your Google Drive (if you enable backup)</li>
-                <li>We use Google Sign-In only for authentication and backup</li>
-            </ul>
-        </div>
-
-        <h2>1. Introduction</h2>
-        <p>
-            Welcome to Pocket Pal ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. 
-            This privacy policy explains how we collect, use, and safeguard your information when you use our mobile application ("App").
-        </p>
-        <p>
-            <strong>Developer:</strong> Bewandera Labs<br>
-            <strong>Contact Email:</strong> bewanderalabs@gmail.com<br>
-            <strong>Location:</strong> Nairobi, Kenya
-        </p>
-
-        <h2>2. Information We Collect</h2>
-        
-        <h3>2.1 Information You Provide</h3>
-        <ul>
-            <li><strong>Google Account Information:</strong> When you sign in with Google, we collect your email address and basic profile information (name, profile picture) for authentication purposes only.</li>
-            <li><strong>Financial Data:</strong> Budget information, transactions, income, expenses, notes, reminders, and goals that you manually enter into the app.</li>
-            <li><strong>Security Passphrase:</strong> You create a passphrase to encrypt your data. We do not store or have access to your passphrase - it never leaves your device in plain text.</li>
-        </ul>
-
-        <h3>2.2 Automatically Collected Information</h3>
-        <ul>
-            <li><strong>Device Information:</strong> Device ID (for identifying your backup), operating system version, app version.</li>
-            <li><strong>Usage Data:</strong> App crashes, performance metrics (via Firebase Crashlytics - anonymized).</li>
-            <li><strong>Advertising ID:</strong> Anonymous advertising identifier for showing ads (if you haven't purchased Premium).</li>
-        </ul>
-
-        <h3>2.3 Information We DO NOT Collect</h3>
-        <ul>
-            <li>❌ Location data</li>
-            <li>❌ Contacts or phone numbers</li>
-            <li>❌ Photos or camera access (except for receipt scanning feature - processed locally)</li>
-            <li>❌ SMS or call logs</li>
-            <li>❌ Microphone or audio</li>
-        </ul>
-
-        <h2>3. How We Use Your Information</h2>
-        <p>We use the collected information for the following purposes:</p>
-        <ul>
-            <li><strong>Authentication:</strong> To verify your identity via Google Sign-In.</li>
-            <li><strong>Cloud Backup:</strong> To securely store your encrypted data in your personal Google Drive (appDataFolder - only accessible by you and Pocket Pal).</li>
-            <li><strong>App Functionality:</strong> To provide budgeting, expense tracking, reminders, and analytics features.</li>
-            <li><strong>Crash Reporting:</strong> To identify and fix bugs (anonymized data via Firebase Crashlytics).</li>
-            <li><strong>Advertising:</strong> To display relevant ads (only for free tier users via Google AdMob).</li>
-        </ul>
-
-        <h2>4. Data Storage and Security</h2>
-        
-        <h3>4.1 Encryption</h3>
-        <p>
-            <strong>Your financial data is protected with bank-grade, end-to-end encryption (AES-256-GCM).</strong>
-        </p>
-        <ul>
-            <li>Your passphrase is used to generate an encryption key (KEK) via PBKDF2 with 100,000 iterations.</li>
-            <li>Data is encrypted on your device before being uploaded to Google Drive.</li>
-            <li>We (the developers) cannot decrypt your data - only you can with your passphrase.</li>
-            <li>⚠️ <strong>Important:</strong> If you forget your passphrase, we cannot recover your data. There is no "forgot password" option for security reasons.</li>
-        </ul>
-
-        <h3>4.2 Storage Locations</h3>
-        <ul>
-            <li><strong>Local Storage:</strong> Your data is stored on your device using encrypted storage (Hive with AES-256).</li>
-            <li><strong>Google Drive:</strong> Encrypted backups are stored in your personal Google Drive's "appDataFolder" - a special folder only accessible by Pocket Pal and you. Other apps and users cannot access this folder.</li>
-            <li><strong>Firebase:</strong> We use Firebase Authentication (email/user ID only) and Crashlytics (anonymized crash reports).</li>
-        </ul>
-
-        <h3>4.3 Data Retention</h3>
-        <ul>
-            <li>Your data remains on your device and Google Drive until you delete it.</li>
-            <li>If you uninstall the app without backup, local data is permanently deleted.</li>
-            <li>You can delete your Google Drive backup anytime from your Google Drive settings.</li>
-        </ul>
-
-        <h2>5. Third-Party Services</h2>
-        <p>We use the following third-party services:</p>
-
-        <table border="1" cellpadding="10" style="width:100%; border-collapse: collapse; margin: 20px 0;">
-            <tr style="background-color: #f2f2f2;">
-                <th>Service</th>
-                <th>Purpose</th>
-                <th>Data Shared</th>
-                <th>Privacy Policy</th>
-            </tr>
-            <tr>
-                <td>Google Drive API</td>
-                <td>Cloud backup storage</td>
-                <td>Encrypted backup files</td>
-                <td><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></td>
-            </tr>
-            <tr>
-                <td>Firebase Authentication</td>
-                <td>User sign-in</td>
-                <td>Email, user ID</td>
-                <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></td>
-            </tr>
-            <tr>
-                <td>Firebase Crashlytics</td>
-                <td>Crash reporting</td>
-                <td>Anonymous device info, crash logs</td>
-                <td><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy</a></td>
-            </tr>
-            <tr>
-                <td>Google AdMob</td>
-                <td>Display ads (free users)</td>
-                <td>Advertising ID, device info</td>
-                <td><a href="https://policies.google.com/privacy" target="_blank">AdMob Privacy</a></td>
-            </tr>
-        </table>
-
-        <h2>6. Data Sharing and Disclosure</h2>
-        <p><strong>We do NOT sell, rent, or trade your personal information to third parties.</strong></p>
-        <p>We may disclose your information only in the following circumstances:</p>
-        <ul>
-            <li><strong>Legal Compliance:</strong> If required by law, court order, or governmental regulation.</li>
-            <li><strong>Service Providers:</strong> To third-party services listed above, only to the extent necessary for app functionality.</li>
-            <li><strong>Business Transfers:</strong> If Pocket Pal is acquired or merged, your data may be transferred (you will be notified).</li>
-        </ul>
-
-        <h2>7. Your Rights and Choices</h2>
-        <p>You have the following rights regarding your data:</p>
-        <ul>
-            <li><strong>Access:</strong> You can view all your data within the app.</li>
-            <li><strong>Deletion:</strong> You can delete your data at any time:
-                <ul>
-                    <li>Local data: Uninstall the app or use "Clear Data" in Settings.</li>
-                    <li>Cloud backup: Go to Google Drive → Settings → Manage Apps → Pocket Pal → Delete hidden app data.</li>
-                    <li>Account: Sign out and delete your local data.</li>
-                </ul>
-            </li>
-            <li><strong>Portability:</strong> You can export your data as a JSON file from the app's Settings.</li>
-            <li><strong>Opt-out of Ads:</strong> Purchase Pocket Pal Premium to remove all ads.</li>
-            <li><strong>Revoke Permissions:</strong> You can revoke app permissions in your device settings (notifications, exact alarms, etc.).</li>
-        </ul>
-
-        <h2>8. Children's Privacy</h2>
-        <p>
-            Pocket Pal is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. 
-            If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately at 
-            <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a>.
-        </p>
-
-        <h2>9. International Data Transfers</h2>
-        <p>
-            Your data may be stored on servers located outside Kenya (via Google Drive and Firebase, which use global infrastructure). 
-            By using Pocket Pal, you consent to the transfer of your encrypted data to these locations. We ensure that all third-party 
-            services comply with data protection regulations (GDPR, CCPA where applicable).
-        </p>
-
-        <h2>10. Changes to This Privacy Policy</h2>
-        <p>
-            We may update this privacy policy from time to time. We will notify you of any changes by:
-        </p>
-        <ul>
-            <li>Posting the new privacy policy in the app</li>
-            <li>Updating the "Last Updated" date at the top of this document</li>
-            <li>Sending an in-app notification for significant changes</li>
-        </ul>
-        <p>
-            Your continued use of the app after changes indicates your acceptance of the updated policy.
-        </p>
-
-        <h2>11. Contact Us</h2>
-        <div class="contact">
-            <p>If you have any questions, concerns, or requests regarding this privacy policy or your data, please contact us:</p>
-            <p>
-                <strong>Email:</strong> <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a><br>
-                <strong>Developer:</strong> Bewandera Labs<br>
-                <strong>Location:</strong> Nairobi, Kenya<br>
-                <strong>Response Time:</strong> We aim to respond within 48 hours
-            </p>
-        </div>
-
-        <h2>12. Governing Law</h2>
-        <p>
-            This privacy policy is governed by the laws of Kenya. Any disputes arising from this policy will be resolved under Kenyan jurisdiction.
-        </p>
-
-        <hr style="margin: 40px 0;">
-        <p style="text-align: center; color: #7f8c8d; font-size: 14px;">
-            © 2026 Bewandera Labs. All rights reserved.<br>
-            Last Updated: January 30, 2026
-        </p>
+<header class="site" id="siteHeader">
+  <div class="nav-inner">
+    <a class="brand" href="./index.html" style="text-decoration:none;">
+      <img src="icon.png" class="logo" alt="PocketPal Logo">
+      PocketPal
+    </a>
+    <nav class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./privacy-policy.html" class="current">Privacy</a>
+      <a href="./terms.html">Terms</a>
+    </nav>
+  </div>
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-scroll" id="tocScroll">
+      <a class="chip" href="#about">About PocketPal</a>
+      <a class="chip" href="#collect">What we collect</a>
+      <a class="chip" href="#protect">How we protect it</a>
+      <a class="chip" href="#storage">Where it lives</a>
+      <a class="chip" href="#rights">Sharing &amp; your rights</a>
+      <a class="chip" href="#legal">Legal &amp; contact</a>
     </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Privacy Policy</span>
+      <h1>Your money's story is yours to keep.</h1>
+      <p class="lede">PocketPal protects every budget, transaction, and goal you enter with bank-grade encryption — so the only person who can ever read your financial data is you.</p>
+      <div class="meta-pills">
+        <span class="pill">Effective <strong>January 30, 2026</strong></span>
+        <span class="pill">Last updated <strong>July 4, 2026</strong></span>
+        <span class="pill">Developed by <strong>Bewandera Labs</strong> · Nairobi, Kenya</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="ring r1"></span>
+      <span class="ring r2"></span>
+      <span class="ring r3"></span>
+      <svg class="badge" viewBox="0 0 96 96" fill="none">
+        <circle cx="48" cy="48" r="48" fill="#E3F8F1"/>
+        <rect x="30" y="42" width="36" height="28" rx="6" fill="#0F766E"/>
+        <path d="M36 42v-8a12 12 0 0 1 24 0v8" stroke="#0B5D53" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="48" cy="54" r="4" fill="#fff"/>
+        <path d="M48 58v6" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+<div class="wrap">
+  <section class="glance">
+    <div class="glance-grid">
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+        <h3>Encrypted before it leaves your phone</h3>
+        <p>Your financial data is locked with AES-256-GCM encryption on your device before any backup is created.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/><line x1="3" y1="21" x2="21" y2="3"/></svg></div>
+        <h3>Only you hold the key</h3>
+        <p>Your passphrase never leaves your device in readable form — we genuinely can't decrypt your budgets, even if asked to.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a6 6 0 1 1 1.3-11.9 5 5 0 0 1 9.6 2A4.5 4.5 0 0 1 17.5 19Z"/></svg></div>
+        <h3>Backups live in your own Google Drive</h3>
+        <p>Optional encrypted backups stay in your personal Drive's private app folder — never on our servers.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.9 3.4 8.9 8 10 4.6-1.1 8-5.1 8-10V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Never sold. Never traded.</h3>
+        <p>Your personal information is never sold, rented, or handed off for advertising profit.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.6 12.5 7.9-7.9M16.5 8l2 2M19 5l2 2"/></svg></div>
+        <h3>Google Sign-In, and nothing more</h3>
+        <p>We use it only to confirm it's you and connect your backup — never to read your inbox, contacts, or files.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="block" id="about">
+    <span class="block-eyebrow">Overview</span>
+    <h2>About PocketPal</h2>
+    <p class="section-intro">PocketPal is a personal budgeting and expense-tracking app built by Bewandera Labs, a small independent team based in Nairobi, Kenya.</p>
+    <div class="card">
+      <p>PocketPal helps you:</p>
+      <ul>
+        <li>Track income and everyday expenses</li>
+        <li>Create and manage budgets</li>
+        <li>Monitor savings goals</li>
+        <li>See simple insights into your spending habits</li>
+        <li>Securely back up your financial records to your own Google Drive — entirely optional</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COLLECT -->
+  <section class="block" id="collect">
+    <span class="block-eyebrow">Data collection</span>
+    <h2>What we collect</h2>
+    <p class="section-intro">A short, honest list of what PocketPal sees — and what it deliberately never touches.</p>
+
+    <h3 style="font-size:17px; margin-bottom:14px;">Information you choose to share</h3>
+    <div class="card">
+      <h3><span class="icn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1"/></svg></span>Google account</h3>
+      <p>When you choose to sign in with Google, PocketPal uses your account only to authenticate you and connect your encrypted backup to your own Drive. We may access your email address, display name, and profile photo (if you have one).</p>
+      <p><strong>We never access your emails, contacts, calendar, or any other part of your Google account.</strong></p>
+    </div>
+    <div class="card">
+      <h3><span class="icn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>Financial data</h3>
+      <p>The budgets, expenses, income, savings goals, notes, and reminders you enter remain yours. PocketPal only uses this information to run the features you're actually using in the app.</p>
+    </div>
+    <div class="card">
+      <h3><span class="icn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>Your security passphrase</h3>
+      <p>When you turn on encrypted backups, you create a personal passphrase. It protects your backup and is never stored anywhere in a form that lets us — or anyone else — read it.</p>
+      <p>Because only you know it, we genuinely cannot recover it if it's forgotten. More on that below.</p>
+    </div>
+
+    <h3 style="font-size:17px; margin:28px 0 14px;">Collected automatically</h3>
+    <div class="card">
+      <h3><span class="icn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>Device information</h3>
+      <p>A device ID (used to identify your backup), your operating system version, and the app version you're running.</p>
+    </div>
+    <div class="card">
+      <h3><span class="icn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>Usage &amp; crash data</h3>
+      <p>Anonymized crash reports and performance metrics via Firebase Crashlytics, so we can catch and fix bugs.</p>
+    </div>
+    <div class="card">
+      <h3><span class="icn-sm"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><line x1="6" y1="12" x2="6.01" y2="12"/></svg></span>Advertising ID</h3>
+      <p>An anonymous advertising identifier, used only to show ads if you're on the free tier. PocketPal Premium removes this entirely.</p>
+    </div>
+
+    <h3 style="font-size:17px; margin:28px 0 6px;">What PocketPal never collects</h3>
+    <p class="section-intro" style="margin-bottom:6px;">No location tracking, no contacts, no hidden access. Full stop.</p>
+    <div class="checklist">
+      <div class="check-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Your location</div>
+      <div class="check-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Contacts or phone numbers</div>
+      <div class="check-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Photos or camera roll</div>
+      <div class="check-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>SMS or call logs</div>
+      <div class="check-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Microphone or audio</div>
+      <div class="check-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Your decrypted financial data — ever</div>
+    </div>
+    <p style="font-size:13.5px; color:var(--ink-faint); margin-top:10px;">The one exception: receipt scanning, which processes the photo entirely on your device — the image never leaves your phone.</p>
+  </section>
+
+  <!-- PROTECT -->
+  <section class="block" id="protect">
+    <span class="block-eyebrow">Usage &amp; security</span>
+    <h2>How we use — and protect — your information</h2>
+    <div class="card">
+      <h3>How we use it</h3>
+      <ul>
+        <li><strong>Authentication</strong> — verifying it's really you via Google Sign-In</li>
+        <li><strong>Cloud backup</strong> — securely storing your encrypted data in your own Google Drive</li>
+        <li><strong>App functionality</strong> — powering budgeting, expense tracking, reminders, and insights</li>
+        <li><strong>Crash reporting</strong> — catching and fixing bugs from anonymized data</li>
+        <li><strong>Advertising</strong> — showing relevant ads, only for free-tier users</li>
+      </ul>
+    </div>
+
+    <h3 style="font-size:17px; margin:28px 0 14px;">Security, built in from day one</h3>
+    <div class="card">
+      <p>Your financial information is encrypted <em>before</em> it ever leaves your device. Even if someone somehow accessed your cloud backup, all they'd find is unreadable, encrypted data — never your actual budgets or transactions.</p>
+      <p>PocketPal uses industry-standard cryptography to make that true:</p>
+      <ul>
+        <li>Your passphrase generates an encryption key using <strong>PBKDF2 with 100,000 iterations</strong></li>
+        <li>Your data is encrypted with <strong>AES-256-GCM</strong> before upload</li>
+        <li>On-device data is stored using encrypted local storage (Hive, AES-256)</li>
+        <li>We — the developers — have no way to decrypt your data. Only your passphrase can</li>
+      </ul>
+      <div class="callout">
+        <span class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+        <p><strong>Please keep your passphrase somewhere safe.</strong> Because it's the only key to your data, there's no "forgot password" recovery option — by design, so no one but you can ever unlock your backup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORAGE -->
+  <section class="block" id="storage">
+    <span class="block-eyebrow">Storage</span>
+    <h2>Where your data actually lives</h2>
+    <div class="card">
+      <h3>Storage locations</h3>
+      <ul>
+        <li><strong>On your device</strong> — encrypted local storage (Hive, AES-256)</li>
+        <li><strong>Google Drive</strong> — encrypted backups sit in your account's private <code>appDataFolder</code>, a hidden space only PocketPal and you can reach. No other app, and no other person, can see it</li>
+        <li><strong>Firebase</strong> — used for authentication (email/user ID only) and anonymized crash reporting</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>How long we keep it</h3>
+      <ul>
+        <li>Your data stays on your device and in Drive until <em>you</em> delete it</li>
+        <li>Uninstalling without a backup permanently deletes your local data</li>
+        <li>You can remove your Drive backup any time from your Google Drive settings</li>
+      </ul>
+    </div>
+
+    <h3 style="font-size:17px; margin:28px 0 14px;">Trusted services we work with</h3>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <span class="tag">Backup</span>
+        <h4>Google Drive API</h4>
+        <p>Cloud backup storage · shares only your encrypted backup files</p>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy →</a>
+      </div>
+      <div class="partner-card">
+        <span class="tag">Sign-in</span>
+        <h4>Firebase Authentication</h4>
+        <p>User sign-in · shares your email and user ID</p>
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy →</a>
+      </div>
+      <div class="partner-card">
+        <span class="tag">Stability</span>
+        <h4>Firebase Crashlytics</h4>
+        <p>Crash reporting · shares anonymous device info and crash logs</p>
+        <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy →</a>
+      </div>
+      <div class="partner-card">
+        <span class="tag">Free tier</span>
+        <h4>Google AdMob</h4>
+        <p>Displays ads · shares advertising ID and device info</p>
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">AdMob privacy →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIGHTS -->
+  <section class="block" id="rights">
+    <span class="block-eyebrow">Control</span>
+    <h2>Sharing, disclosure &amp; your rights</h2>
+    <div class="card">
+      <h3>We respect your privacy</h3>
+      <p>PocketPal does not sell, rent, or trade your personal information — ever. We share information only when it's necessary to:</p>
+      <ul>
+        <li>Comply with the law, a court order, or a government regulation</li>
+        <li>Operate the third-party services listed above, and only to the extent needed</li>
+        <li>Complete a business transfer, such as an acquisition or merger — you'll always be notified first</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Your rights &amp; choices</h3>
+      <ul>
+        <li><strong>Access</strong> — view all your data directly inside the app</li>
+        <li><strong>Deletion</strong> — uninstall or use "Clear Data" in Settings for local data; remove hidden app data from Google Drive → Settings → Manage Apps for your cloud backup; sign out any time to end your session</li>
+        <li><strong>Portability</strong> — export your data as a JSON file from Settings, whenever you like</li>
+        <li><strong>Opt out of ads</strong> — PocketPal Premium removes ads entirely</li>
+        <li><strong>Revoke permissions</strong> — manage notifications, alarms, and other permissions from your device settings</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LEGAL -->
+  <section class="block" id="legal">
+    <span class="block-eyebrow">Legal</span>
+    <h2>The fine print</h2>
+
+    <div class="card">
+      <h3>Children's privacy</h3>
+      <p>PocketPal isn't intended for anyone under 13, and we don't knowingly collect personal information from children. If you believe a child has shared information with us, please reach out right away and we'll act promptly.</p>
+    </div>
+    <div class="card">
+      <h3>International data transfers</h3>
+      <p>Because Google Drive and Firebase run on global infrastructure, your encrypted data may be stored outside Kenya. By using PocketPal, you agree to this transfer. We only work with services that meet recognized data-protection standards, including GDPR and CCPA where they apply.</p>
+    </div>
+    <div class="card">
+      <h3>Changes to this policy</h3>
+      <p>If this policy changes, we'll let you know by posting the update in the app, updating the date at the top of this page, and — for anything significant — sending an in-app notification. Continuing to use PocketPal after a change means you accept the update.</p>
+    </div>
+    <div class="card">
+      <h3>Governing law</h3>
+      <p>This policy is governed by the laws of Kenya, and any disputes are resolved under Kenyan jurisdiction.</p>
+    </div>
+
+    <div class="contact-card">
+      <div>
+        <h3>We'd be happy to help.</h3>
+        <p>Questions about this policy or your data? Bewandera Labs typically replies within 48 hours.</p>
+      </div>
+      <a class="btn" href="mailto:bewanderalabs@gmail.com">Email bewanderalabs@gmail.com</a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="icon.png" class="logo logo-sm" alt="PocketPal Logo">
+      PocketPal
+    </div>
+    <div class="footer-links">
+      <a href="./index.html">Home</a>
+      <a href="./terms.html">Terms of Service</a>
+      <a href="mailto:bewanderalabs@gmail.com">Contact</a>
+    </div>
+    <p class="footer-fine">Built with care by Bewandera Labs in Nairobi, Kenya. © <span id="year">2026</span> Bewandera Labs. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('siteHeader');
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 8);
+    backToTop.classList.toggle('show', y > 500);
+  }, { passive:true });
+
+  const chips = Array.from(document.querySelectorAll('.chip'));
+  const sections = chips.map(c => document.querySelector(c.getAttribute('href')));
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const idx = sections.indexOf(entry.target);
+        if (idx > -1 && entry.isIntersecting){
+          chips.forEach(c => c.classList.remove('active'));
+          chips[idx].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    sections.forEach(s => s && io.observe(s));
+  }
+</script>
 </body>
 </html>
