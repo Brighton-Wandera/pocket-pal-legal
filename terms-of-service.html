@@ -1,342 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pocket Pal - Terms of Service</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — PocketPal</title>
+<meta name="description" content="PocketPal's Terms of Service — your license to use the app, Premium billing, and your rights and responsibilities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6FBF9;
+    --surface:#FFFFFF;
+    --surface-2:#EFFBF7;
+    --ink:#0B2A28;
+    --ink-soft:#4C6764;
+    --ink-faint:#7C948F;
+    --teal-900:#073B36;
+    --teal-800:#0B5D53;
+    --teal-700:#0F766E;
+    --teal-500:#14B8A6;
+    --teal-300:#7EE8D4;
+    --mint-100:#E3F8F1;
+    --amber-50:#FFF7E6;
+    --amber-400:#F1A614;
+    --amber-700:#8A5A05;
+    --border:#DCEFEA;
+    --shadow: 0 1px 2px rgba(7,59,54,0.04), 0 8px 24px -12px rgba(7,59,54,0.15);
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --radius-sm: 10px;
+    --maxw: 920px;
+  }
 
-        .container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
 
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-        }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
 
-        h2 {
-            color: #34495e;
-            margin-top: 30px;
-        }
+  h1,h2,h3{
+    font-family:'Manrope','Inter',sans-serif;
+    color:var(--teal-900);
+    line-height:1.2;
+    margin:0 0 12px;
+  }
 
-        .effective-date {
-            color: #7f8c8d;
-            font-style: italic;
-        }
+  a{color:var(--teal-800); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible, .chip:focus-visible{
+    outline:2px solid var(--teal-500);
+    outline-offset:3px;
+    border-radius:6px;
+  }
 
-        .warning {
-            background-color: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-        }
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background:var(--teal-800); color:#fff; padding:10px 16px; border-radius:8px; z-index:100;
+  }
+  .skip-link:focus{ left:16px; top:16px; }
 
-        ul {
-            padding-left: 20px;
-        }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
 
-        li {
-            margin: 10px 0;
-        }
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:40;
+    background:rgba(246,251,249,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s ease, box-shadow .25s ease;
+  }
+  header.site.scrolled{
+    border-bottom-color:var(--border);
+    box-shadow:0 2px 16px -8px rgba(7,59,54,0.15);
+  }
+  .nav-inner{
+    max-width:var(--maxw); margin:0 auto; padding:14px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-weight:800; color:var(--teal-900); font-size:17px;}
+  .logo{width:34px; height:34px; flex:none; display:block; object-fit:contain; border-radius:9px;}
+  .logo-sm{width:26px; height:26px;}
+  .nav-links{display:flex; gap:22px; font-size:14px; font-weight:600;}
+  .nav-links a{color:var(--ink-soft);}
+  .nav-links a.current{color:var(--teal-800);}
 
-        .contact {
-            background-color: #e8f4f8;
-            padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-    </style>
+  /* ---------- Hero ---------- */
+  .hero{padding:64px 0 40px; position:relative; overflow:hidden;}
+  .hero-inner{max-width:var(--maxw); margin:0 auto; padding:0 24px; display:grid; grid-template-columns:1.3fr 0.8fr; gap:40px; align-items:center;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--teal-700); background:var(--mint-100); border:1px solid var(--teal-300);
+    padding:6px 12px; border-radius:999px; margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(30px,4vw,44px); font-weight:800; max-width:16ch;}
+  .hero p.lede{font-size:17.5px; color:var(--ink-soft); max-width:54ch; margin:14px 0 22px;}
+  .meta-pills{display:flex; flex-wrap:wrap; gap:10px;}
+  .pill{
+    font-size:13px; color:var(--ink-soft); background:var(--surface);
+    border:1px solid var(--border); padding:7px 14px; border-radius:999px;
+  }
+  .pill strong{color:var(--teal-900);}
+
+  .hero-art{display:flex; align-items:center; justify-content:center; position:relative;}
+  .hero-art .ring{
+    position:absolute; border-radius:50%; border:1.5px solid var(--teal-300); opacity:.55;
+  }
+  .hero-art .ring.r1{width:150px; height:150px; animation:pulse 3.6s ease-out infinite;}
+  .hero-art .ring.r2{width:150px; height:150px; animation:pulse 3.6s ease-out infinite 1.2s;}
+  .hero-art .ring.r3{width:150px; height:150px; animation:pulse 3.6s ease-out infinite 2.4s;}
+  @keyframes pulse{
+    0%{transform:scale(0.7); opacity:.55;}
+    100%{transform:scale(2.1); opacity:0;}
+  }
+  .hero-art svg.badge{width:96px; height:96px; position:relative; z-index:1;}
+
+  /* ---------- Chip nav (table of contents) ---------- */
+  nav.toc{padding:6px 0 8px;}
+  .toc-scroll{
+    display:flex; gap:10px; overflow-x:auto; padding:4px 24px 14px;
+    max-width:var(--maxw); margin:0 auto; scrollbar-width:none;
+  }
+  .toc-scroll::-webkit-scrollbar{display:none;}
+  .chip{
+    flex:none; font-size:13.5px; font-weight:600; color:var(--teal-800);
+    background:var(--surface); border:1px solid var(--border);
+    padding:9px 16px; border-radius:999px; white-space:nowrap; transition:.2s ease;
+  }
+  .chip:hover{border-color:var(--teal-500); text-decoration:none;}
+  .chip.active{background:var(--teal-800); border-color:var(--teal-800); color:#fff;}
+
+  /* ---------- Glance grid ---------- */
+  section.glance{padding:12px 0 8px;}
+  .glance-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:14px; margin-top:6px;
+  }
+  .glance-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+    padding:20px; box-shadow:var(--shadow);
+  }
+  .glance-card .icn{
+    width:38px; height:38px; border-radius:10px; background:var(--mint-100);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px; color:var(--teal-700);
+  }
+  .glance-card h3{font-size:15.5px; margin-bottom:6px;}
+  .glance-card p{font-size:14px; color:var(--ink-soft); margin:0;}
+
+  /* ---------- Sections ---------- */
+  main{padding:20px 0 40px;}
+  section.block{padding:52px 0; border-top:1px solid var(--border);}
+  section.block:first-of-type{border-top:none;}
+  .block-eyebrow{
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--teal-700); margin-bottom:10px; display:block;
+  }
+  section.block h2{font-size:26px; font-weight:800; margin-bottom:6px;}
+  section.block > .wrap > p.section-intro{color:var(--ink-soft); font-size:16px; max-width:64ch; margin-bottom:28px;}
+
+  .card{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+    padding:22px 24px; margin-bottom:16px; box-shadow:var(--shadow);
+  }
+  .card h3{font-size:16.5px; margin-bottom:8px;}
+  .card p{color:var(--ink-soft); margin:0 0 8px; font-size:15px;}
+  .card p:last-child{margin-bottom:0;}
+  .card ul, .card ol{margin:8px 0 0; padding-left:20px; color:var(--ink-soft); font-size:15px;}
+  .card li{margin:4px 0;}
+  .card ul ul{margin-top:4px;}
+  .card .caps{font-weight:700; color:var(--teal-900); font-size:14.5px; letter-spacing:.01em;}
+
+  .callout{
+    display:flex; gap:14px; background:var(--amber-50); border:1px solid #F3D999;
+    border-radius:var(--radius-md); padding:18px 20px; margin:20px 0;
+  }
+  .callout .icn{color:var(--amber-700); flex:none;}
+  .callout-body strong.title{display:block; color:#6E4404; font-size:14px; margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em;}
+  .callout p, .callout ul{margin:0; color:var(--amber-700); font-size:14.5px; line-height:1.6; padding-left:18px;}
+  .callout ul{margin-top:6px;}
+  .callout strong{color:#6E4404;}
+
+  .partner-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:8px;}
+  .partner-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
+    padding:18px 20px; box-shadow:var(--shadow);
+  }
+  .partner-card h4{margin:0 0 6px; font-size:15.5px; font-family:'Manrope',sans-serif; color:var(--teal-900); font-weight:700;}
+  .partner-card p{margin:0; font-size:14px; color:var(--ink-soft);}
+
+  .steps{list-style:none; margin:14px 0 0; padding:0; counter-reset:step;}
+  .steps li{
+    counter-increment:step; position:relative; padding:4px 0 4px 40px; margin-bottom:14px; color:var(--ink-soft); font-size:15px;
+  }
+  .steps li:last-child{margin-bottom:0;}
+  .steps li::before{
+    content:counter(step); position:absolute; left:0; top:2px; width:26px; height:26px; border-radius:50%;
+    background:var(--teal-800); color:#fff; font-family:'Manrope',sans-serif; font-weight:700; font-size:13px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .steps li strong{color:var(--teal-900);}
+
+  .contact-card{
+    background:linear-gradient(135deg,var(--teal-800),var(--teal-700));
+    border-radius:var(--radius-lg); padding:32px; color:#fff;
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;
+  }
+  .contact-card h3{color:#fff; margin-bottom:6px; font-size:20px;}
+  .contact-card p{color:rgba(255,255,255,0.85); margin:0; font-size:14.5px;}
+  .contact-card .btn{
+    background:#fff; color:var(--teal-800); font-weight:700; padding:12px 22px;
+    border-radius:999px; font-size:14.5px; white-space:nowrap;
+  }
+  .contact-card .btn:hover{text-decoration:none; opacity:.92;}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--border); padding:36px 0 40px; background:var(--surface-2);}
+  .footer-inner{
+    max-width:var(--maxw); margin:0 auto; padding:0 24px;
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .footer-brand{display:flex; align-items:center; gap:10px; font-family:'Manrope',sans-serif; font-weight:800; color:var(--teal-900);}
+  .footer-links{display:flex; gap:18px; font-size:13.5px; font-weight:600;}
+  .footer-fine{width:100%; margin-top:18px; font-size:13px; color:var(--ink-faint); text-align:center;}
+
+  .back-to-top{
+    position:fixed; right:20px; bottom:20px; width:44px; height:44px; border-radius:50%;
+    background:var(--teal-800); color:#fff; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px -6px rgba(7,59,54,0.45); opacity:0; pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease; z-index:50;
+  }
+  .back-to-top.show{opacity:1; pointer-events:auto;}
+  .back-to-top:hover{transform:translateY(-2px); text-decoration:none;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:800px){
+    .hero-inner{grid-template-columns:1fr; text-align:left;}
+    .hero-art{order:-1; margin-bottom:8px; height:150px;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:480px){
+    .wrap, .nav-inner, .hero-inner, .footer-inner{padding-left:18px; padding-right:18px;}
+    section.block{padding:40px 0;}
+    .contact-card{flex-direction:column; align-items:flex-start;}
+  }
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Terms of Service for Pocket Pal</h1>
-        <p class="effective-date">Effective Date: January 30, 2026</p>
-        <p class="effective-date">Last Updated: January 30, 2026</p>
+<a href="#main" class="skip-link">Skip to content</a>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>
-            By downloading, installing, or using Pocket Pal ("the App"), you agree to be bound by these Terms of Service
-            ("Terms").
-            If you do not agree to these Terms, please do not use the App.
-        </p>
-        <p>
-            These Terms constitute a legal agreement between you ("User" or "you") and Bewandera Labs ("we," "us," or
-            "our").
-        </p>
-
-        <h2>2. License Grant</h2>
-        <p>
-            We grant you a limited, non-exclusive, non-transferable, revocable license to use Pocket Pal for personal,
-            non-commercial purposes,
-            subject to these Terms.
-        </p>
-        <p><strong>You may NOT:</strong></p>
-        <ul>
-            <li>Copy, modify, or create derivative works of the App</li>
-            <li>Reverse engineer, decompile, or disassemble the App</li>
-            <li>Remove or alter any copyright or proprietary notices</li>
-            <li>Use the App for any illegal or unauthorized purpose</li>
-            <li>Sell, rent, lease, or sublicense the App to third parties</li>
-        </ul>
-
-        <h2>3. User Accounts and Authentication</h2>
-        <h3>3.1 Account Creation</h3>
-        <p>
-            To use cloud backup features, you must sign in with a Google account. You are responsible for:
-        </p>
-        <ul>
-            <li>Maintaining the confidentiality of your Google account credentials</li>
-            <li>All activities that occur under your account</li>
-            <li>Creating a strong, unique passphrase for encrypting your data</li>
-        </ul>
-
-        <div class="warning">
-            <strong>⚠️ IMPORTANT - Passphrase Responsibility:</strong>
-            <ul>
-                <li>Your passphrase is used to encrypt your financial data.</li>
-                <li>We do NOT store your passphrase and CANNOT recover it if lost.</li>
-                <li>If you forget your passphrase, your encrypted backup data will be permanently inaccessible.</li>
-                <li>There is no "forgot password" recovery option for security reasons.</li>
-            </ul>
-        </div>
-
-        <h3>3.2 Account Security</h3>
-        <p>
-            You agree to notify us immediately at <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a>
-            if you suspect unauthorized access to your account.
-        </p>
-
-        <h2>4. User Conduct</h2>
-        <p>You agree NOT to:</p>
-        <ul>
-            <li>Use the App to violate any local, state, national, or international law</li>
-            <li>Transmit any viruses, malware, or harmful code</li>
-            <li>Attempt to gain unauthorized access to our servers or systems</li>
-            <li>Interfere with other users' enjoyment of the App</li>
-            <li>Use automated systems (bots, scripts) to access the App</li>
-            <li>Misrepresent your identity or affiliation</li>
-        </ul>
-
-        <h2>5. Data and Privacy</h2>
-        <p>
-            Your use of the App is also governed by our <a href="privacy-policy.html">Privacy Policy</a>.
-            By using the App, you consent to the collection and use of your information as described in the Privacy
-            Policy.
-        </p>
-        <p><strong>Key Points:</strong></p>
-        <ul>
-            <li>Your financial data is encrypted end-to-end (AES-256-GCM)</li>
-            <li>Backups are stored in your personal Google Drive</li>
-            <li>We cannot access your encrypted data</li>
-            <li>We do not sell your personal information</li>
-        </ul>
-
-        <h2>6. Subscription and Payments (Pocket Pal Premium)</h2>
-        <h3>6.1 Premium Features</h3>
-        <p>
-            Pocket Pal offers a premium subscription ("Premium") with additional features. Premium features may include:
-        </p>
-        <ul>
-            <li>Ad-free experience</li>
-            <li>Advanced analytics and reports</li>
-            <li>Priority customer support</li>
-            <li>Additional cloud storage</li>
-        </ul>
-
-        <h3>6.2 Billing</h3>
-        <ul>
-            <li>Subscriptions are billed through Google Play Store</li>
-            <li>Charges occur at the beginning of each billing cycle (monthly/yearly)</li>
-            <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period</li>
-            <li>You can manage or cancel subscriptions in your Google Play Store account settings</li>
-        </ul>
-
-        <h3>6.3 Refund Policy</h3>
-        <p>
-            Refunds are subject to Google Play Store's refund policy. Generally:
-        </p>
-        <ul>
-            <li>You may request a refund within 48 hours of purchase for first-time subscriptions</li>
-            <li>Contact us at <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a> for refund inquiries
-            </li>
-            <li>Refunds are processed through Google Play Store</li>
-        </ul>
-
-        <h2>7. Disclaimer of Warranties</h2>
-        <p>
-            <strong>THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR
-                IMPLIED.</strong>
-        </p>
-        <p>We do NOT warrant that:</p>
-        <ul>
-            <li>The App will be error-free, secure, or uninterrupted</li>
-            <li>The App will meet your specific requirements</li>
-            <li>Data stored will be 100% accurate or free from loss</li>
-            <li>Any financial advice or calculations are guaranteed to be accurate</li>
-        </ul>
-        <div class="warning">
-            <strong>⚠️ Financial Disclaimer:</strong>
-            <p>
-                Pocket Pal is a budgeting and expense tracking tool. It does NOT provide financial advice, investment
-                guidance,
-                or tax preparation services. You should consult qualified professionals for financial decisions.
-            </p>
-        </div>
-
-        <h2>8. Limitation of Liability</h2>
-        <p>
-            TO THE MAXIMUM EXTENT PERMITTED BY LAW, BEWANDERA LABS SHALL NOT BE LIABLE FOR:
-        </p>
-        <ul>
-            <li>Any indirect, incidental, special, or consequential damages</li>
-            <li>Loss of profits, data, or business opportunities</li>
-            <li>Damages resulting from your use or inability to use the App</li>
-            <li>Financial losses due to errors, omissions, or inaccuracies in the App</li>
-            <li>Data loss due to forgotten passphrases (you are solely responsible for remembering your passphrase)</li>
-        </ul>
-        <p>
-            <strong>Our total liability shall not exceed the amount you paid for the App in the past 12 months, or $10
-                USD, whichever is greater.</strong>
-        </p>
-
-        <h2>9. Backup and Data Loss</h2>
-        <p>
-            While we provide cloud backup features, you acknowledge and agree that:
-        </p>
-        <ul>
-            <li>You are responsible for maintaining regular backups of your data</li>
-            <li>We are not liable for data loss due to:
-                <ul>
-                    <li>Forgotten passphrases</li>
-                    <li>Device failure or loss</li>
-                    <li>Google Drive service interruptions</li>
-                    <li>Network connectivity issues</li>
-                    <li>Uninstalling the app without backing up</li>
-                </ul>
-            </li>
-            <li>Encrypted backups cannot be recovered without your passphrase</li>
-        </ul>
-
-        <h2>10. Termination</h2>
-        <h3>10.1 Termination by You</h3>
-        <p>You may stop using the App at any time by:</p>
-        <ul>
-            <li>Uninstalling the App from your device</li>
-            <li>Deleting your cloud backup from Google Drive</li>
-            <li>Signing out and clearing local data</li>
-        </ul>
-
-        <h3>10.2 Termination by Us</h3>
-        <p>We reserve the right to suspend or terminate your access to the App if you:</p>
-        <ul>
-            <li>Violate these Terms</li>
-            <li>Engage in fraudulent or illegal activity</li>
-            <li>Abuse or misuse the App</li>
-        </ul>
-
-        <h2>11. Changes to Terms</h2>
-        <p>
-            We may modify these Terms at any time. When we do:
-        </p>
-        <ul>
-            <li>We will update the "Last Updated" date at the top</li>
-            <li>We will notify you via in-app notification for material changes</li>
-            <li>Your continued use of the App after changes constitutes acceptance</li>
-        </ul>
-        <p>
-            If you do not agree to the modified Terms, you must stop using the App.
-        </p>
-
-        <h2>12. Third-Party Services</h2>
-        <p>The App integrates with third-party services:</p>
-        <ul>
-            <li>Google Drive (for cloud backup)</li>
-            <li>Firebase (for authentication and crash reporting)</li>
-            <li>Google AdMob (for advertisements)</li>
-        </ul>
-        <p>
-            Your use of these services is subject to their respective terms and policies. We are not responsible for
-            the availability or performance of third-party services.
-        </p>
-
-        <h2>13. Intellectual Property</h2>
-        <p>
-            All intellectual property rights in the App, including but not limited to:
-        </p>
-        <ul>
-            <li>Software code</li>
-            <li>Design, graphics, and user interface</li>
-            <li>Trademarks and logos ("Pocket Pal")</li>
-            <li>Documentation and materials</li>
-        </ul>
-        <p>
-            ...are owned by Bewandera Labs or our licensors. You do not acquire any ownership rights by using the App.
-        </p>
-
-        <h2>14. Governing Law and Dispute Resolution</h2>
-        <h3>14.1 Governing Law</h3>
-        <p>
-            These Terms are governed by the laws of Kenya, without regard to conflict of law principles.
-        </p>
-
-        <h3>14.2 Dispute Resolution</h3>
-        <p>
-            Any disputes arising from these Terms or use of the App shall be resolved through:
-        </p>
-        <ol>
-            <li><strong>Informal Negotiation:</strong> Contact us at <a
-                    href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a> to attempt resolution.</li>
-            <li><strong>Mediation:</strong> If informal resolution fails, disputes will be submitted to mediation in
-                Nairobi, Kenya.</li>
-            <li><strong>Arbitration/Litigation:</strong> Unresolved disputes will be subject to arbitration or courts in
-                Nairobi, Kenya.</li>
-        </ol>
-
-        <h2>15. Severability</h2>
-        <p>
-            If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will
-            continue in full force and effect.
-        </p>
-
-        <h2>16. Entire Agreement</h2>
-        <p>
-            These Terms, together with our Privacy Policy, constitute the entire agreement between you and Bewandera
-            Labs regarding the App.
-        </p>
-
-        <h2>17. Contact Information</h2>
-        <div class="contact">
-            <p>If you have questions about these Terms, please contact us:</p>
-            <p>
-                <strong>Email:</strong> <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a><br>
-                <strong>Developer:</strong> Bewandera Labs<br>
-                <strong>Location:</strong> Nairobi, Kenya<br>
-                <strong>Response Time:</strong> We aim to respond within 48 hours
-            </p>
-        </div>
-
-        <hr style="margin: 40px 0;">
-        <p style="text-align: center; color: #7f8c8d; font-size: 14px;">
-            © 2026 Bewandera Labs. All rights reserved.<br>
-            Last Updated: January 30, 2026
-        </p>
+<header class="site" id="siteHeader">
+  <div class="nav-inner">
+    <a class="brand" href="./index.html" style="text-decoration:none;">
+      <img src="icon.png" class="logo" alt="PocketPal Logo">
+      PocketPal
+    </a>
+    <nav class="nav-links">
+      <a href="./index.html">Home</a>
+      <a href="./privacy-policy.html">Privacy</a>
+      <a href="./terms-of-service.html" class="current">Terms</a>
+    </nav>
+  </div>
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-scroll" id="tocScroll">
+      <a class="chip" href="#license">Using the app</a>
+      <a class="chip" href="#account">Accounts &amp; conduct</a>
+      <a class="chip" href="#data">Data &amp; Premium</a>
+      <a class="chip" href="#liability">Warranties &amp; liability</a>
+      <a class="chip" href="#termination">Termination &amp; changes</a>
+      <a class="chip" href="#legal">Legal details</a>
     </div>
-</body>
+  </nav>
+</header>
 
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Terms of Service</span>
+      <h1>The ground rules, in plain language.</h1>
+      <p class="lede">These are the terms for using PocketPal — your license to use the app, how Premium billing works, and what happens if something goes wrong. We've kept every legal protection in place, just made it easier to actually read.</p>
+      <div class="meta-pills">
+        <span class="pill">Effective <strong>January 30, 2026</strong></span>
+        <span class="pill">Last updated <strong>July 4, 2026</strong></span>
+        <span class="pill">Developed by <strong>Bewandera Labs</strong> · Nairobi, Kenya</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <span class="ring r1"></span>
+      <span class="ring r2"></span>
+      <span class="ring r3"></span>
+      <svg class="badge" viewBox="0 0 96 96" fill="none">
+        <circle cx="48" cy="48" r="48" fill="#E3F8F1"/>
+        <rect x="28" y="20" width="40" height="56" rx="5" fill="#0F766E"/>
+        <rect x="35" y="30" width="26" height="4" rx="2" fill="#7EE8D4"/>
+        <rect x="35" y="40" width="26" height="4" rx="2" fill="#7EE8D4"/>
+        <rect x="35" y="50" width="16" height="4" rx="2" fill="#7EE8D4"/>
+        <circle cx="60" cy="66" r="12" fill="#fff"/>
+        <path d="m55 66 3.5 3.5L66 62" stroke="#0F766E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<main id="main">
+<div class="wrap">
+  <section class="glance">
+    <div class="glance-grid">
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1"/></svg></div>
+        <h3>Personal use only</h3>
+        <p>PocketPal is licensed to you for personal, non-commercial use — copying, reverse engineering, or reselling the app isn't allowed.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+        <h3>Your passphrase, your responsibility</h3>
+        <p>We can't recover a forgotten passphrase — there's no reset option, so keep it somewhere safe.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+        <h3>Premium bills through Google Play</h3>
+        <p>Subscriptions auto-renew and are managed entirely from your Google Play account.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12.01" y2="8"/><line x1="12" y1="12" x2="12" y2="16"/></svg></div>
+        <h3>No guarantees, no financial advice</h3>
+        <p>PocketPal is a budgeting tool, not a financial advisor — the app is provided as-is.</p>
+      </div>
+      <div class="glance-card">
+        <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7 7l-4 8a5 5 0 0 0 8 0Zm10 0-4 8a5 5 0 0 0 8 0Z"/></svg></div>
+        <h3>A fair path if there's a dispute</h3>
+        <p>We start with a conversation, then mediation, before anything goes to arbitration or court in Nairobi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSE -->
+  <section class="block" id="license">
+    <span class="block-eyebrow">Using the app</span>
+    <h2>Acceptance &amp; license</h2>
+    <div class="card">
+      <h3>Agreeing to these terms</h3>
+      <p>By downloading, installing, or using PocketPal ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you don't agree, please don't use the App.</p>
+      <p>These Terms are a legal agreement between you ("User" or "you") and Bewandera Labs ("we," "us," or "our").</p>
+    </div>
+    <div class="card">
+      <h3>Your license to use PocketPal</h3>
+      <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use PocketPal for personal, non-commercial purposes, subject to these Terms.</p>
+      <p><strong>You may NOT:</strong></p>
+      <ul>
+        <li>Copy, modify, or create derivative works of the App</li>
+        <li>Reverse engineer, decompile, or disassemble the App</li>
+        <li>Remove or alter any copyright or proprietary notices</li>
+        <li>Use the App for any illegal or unauthorized purpose</li>
+        <li>Sell, rent, lease, or sublicense the App to third parties</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ACCOUNT -->
+  <section class="block" id="account">
+    <span class="block-eyebrow">Accounts &amp; conduct</span>
+    <h2>Your account, your responsibility</h2>
+    <div class="card">
+      <h3>Signing in</h3>
+      <p>To use cloud backup features, you'll sign in with a Google account. You're responsible for:</p>
+      <ul>
+        <li>Keeping your Google account credentials confidential</li>
+        <li>All activity that occurs under your account</li>
+        <li>Creating a strong, unique passphrase to encrypt your data</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <span class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+      <div class="callout-body">
+        <strong class="title">Passphrase responsibility</strong>
+        <ul>
+          <li>Your passphrase is used to encrypt your financial data</li>
+          <li>We do <strong>NOT</strong> store your passphrase and <strong>cannot</strong> recover it if lost</li>
+          <li>If you forget your passphrase, your encrypted backup data will be permanently inaccessible</li>
+          <li>There is no "forgot password" recovery option, by design, for your security</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Keeping your account secure</h3>
+      <p>Please notify us immediately at <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a> if you suspect unauthorized access to your account.</p>
+    </div>
+    <div class="card">
+      <h3>What we ask you not to do</h3>
+      <p>Using PocketPal, you agree <strong>not</strong> to:</p>
+      <ul>
+        <li>Use the App to violate any local, state, national, or international law</li>
+        <li>Transmit any viruses, malware, or harmful code</li>
+        <li>Attempt to gain unauthorized access to our servers or systems</li>
+        <li>Interfere with other users' enjoyment of the App</li>
+        <li>Use automated systems (bots, scripts) to access the App</li>
+        <li>Misrepresent your identity or affiliation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DATA & PREMIUM -->
+  <section class="block" id="data">
+    <span class="block-eyebrow">Data &amp; Premium</span>
+    <h2>Your data, and PocketPal Premium</h2>
+    <div class="card">
+      <h3>Data &amp; privacy</h3>
+      <p>Your use of the App is also governed by our <a href="privacy-policy.html">Privacy Policy</a>. By using the App, you consent to the collection and use of your information as described there.</p>
+      <p><strong>Key points:</strong></p>
+      <ul>
+        <li>Your financial data is encrypted end-to-end (AES-256-GCM)</li>
+        <li>Backups are stored in your own personal Google Drive</li>
+        <li>We cannot access your encrypted data</li>
+        <li>We do not sell your personal information</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Premium features</h3>
+      <p>PocketPal Premium is an optional subscription with extra features, which may include:</p>
+      <ul>
+        <li>An ad-free experience</li>
+        <li>Advanced analytics and reports</li>
+        <li>Priority customer support</li>
+        <li>Additional cloud storage</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Billing</h3>
+      <ul>
+        <li>Subscriptions are billed through the Google Play Store</li>
+        <li>Charges occur at the start of each billing cycle (monthly or yearly)</li>
+        <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period</li>
+        <li>You can manage or cancel your subscription any time in your Google Play Store account settings</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Refunds</h3>
+      <p>Refunds are subject to the Google Play Store's refund policy. In general:</p>
+      <ul>
+        <li>You may request a refund within 48 hours of purchase for first-time subscriptions</li>
+        <li>Contact us at <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a> for refund questions</li>
+        <li>Refunds are processed through the Google Play Store</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- LIABILITY -->
+  <section class="block" id="liability">
+    <span class="block-eyebrow">Warranties &amp; liability</span>
+    <h2>What we can — and can't — promise</h2>
+    <div class="card">
+      <h3>No warranties</h3>
+      <p class="caps">THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.</p>
+      <p style="margin-top:12px;">We do NOT warrant that:</p>
+      <ul>
+        <li>The App will be error-free, secure, or uninterrupted</li>
+        <li>The App will meet your specific requirements</li>
+        <li>Data stored will be 100% accurate or free from loss</li>
+        <li>Any financial calculations or figures are guaranteed to be accurate</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <span class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+      <div class="callout-body">
+        <strong class="title">Financial disclaimer</strong>
+        <p>PocketPal is a budgeting and expense-tracking tool. It does <strong>not</strong> provide financial advice, investment guidance, or tax preparation services. Please consult a qualified professional for financial decisions.</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Limitation of liability</h3>
+      <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, BEWANDERA LABS SHALL NOT BE LIABLE FOR:</p>
+      <ul>
+        <li>Any indirect, incidental, special, or consequential damages</li>
+        <li>Loss of profits, data, or business opportunities</li>
+        <li>Damages resulting from your use of, or inability to use, the App</li>
+        <li>Financial losses due to errors, omissions, or inaccuracies in the App</li>
+        <li>Data loss due to forgotten passphrases (you are solely responsible for remembering your passphrase)</li>
+      </ul>
+      <p style="margin-top:12px;"><strong>Our total liability will not exceed the amount you paid for the App in the past 12 months, or $10 USD, whichever is greater.</strong></p>
+    </div>
+    <div class="card">
+      <h3>Backups &amp; data loss</h3>
+      <p>We provide cloud backup features, but you acknowledge and agree that:</p>
+      <ul>
+        <li>You're responsible for maintaining regular backups of your own data</li>
+        <li>We're not liable for data loss due to:
+          <ul>
+            <li>Forgotten passphrases</li>
+            <li>Device failure or loss</li>
+            <li>Google Drive service interruptions</li>
+            <li>Network connectivity issues</li>
+            <li>Uninstalling the App without backing up first</li>
+          </ul>
+        </li>
+        <li>Encrypted backups cannot be recovered without your passphrase</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TERMINATION -->
+  <section class="block" id="termination">
+    <span class="block-eyebrow">Termination &amp; changes</span>
+    <h2>Ending things, and updates to these Terms</h2>
+    <div class="card">
+      <h3>If you want to stop using PocketPal</h3>
+      <p>You can stop using the App at any time by:</p>
+      <ul>
+        <li>Uninstalling the App from your device</li>
+        <li>Deleting your cloud backup from Google Drive</li>
+        <li>Signing out and clearing your local data</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>If we need to step in</h3>
+      <p>We reserve the right to suspend or terminate your access to the App if you:</p>
+      <ul>
+        <li>Violate these Terms</li>
+        <li>Engage in fraudulent or illegal activity</li>
+        <li>Abuse or misuse the App</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Changes to these Terms</h3>
+      <p>If we modify these Terms, we will:</p>
+      <ul>
+        <li>Update the "Last Updated" date at the top of this page</li>
+        <li>Notify you via an in-app notification for material changes</li>
+        <li>Treat your continued use of the App after changes as acceptance of the new Terms</li>
+      </ul>
+      <p>If you don't agree with the modified Terms, please stop using the App.</p>
+    </div>
+    <div class="card">
+      <h3>Third-party services</h3>
+      <p>The App integrates with a few third-party services:</p>
+      <div class="partner-grid">
+        <div class="partner-card"><h4>Google Drive</h4><p>Used for cloud backup</p></div>
+        <div class="partner-card"><h4>Firebase</h4><p>Used for authentication and crash reporting</p></div>
+        <div class="partner-card"><h4>Google AdMob</h4><p>Used for advertisements</p></div>
+      </div>
+      <p style="margin-top:14px;">Your use of these services is subject to their own terms and policies. We're not responsible for their availability or performance.</p>
+    </div>
+  </section>
+
+  <!-- LEGAL -->
+  <section class="block" id="legal">
+    <span class="block-eyebrow">Legal details</span>
+    <h2>The formal bits</h2>
+
+    <div class="card">
+      <h3>Intellectual property</h3>
+      <p>All intellectual property rights in the App — including its software code, design, graphics, and user interface, the "PocketPal" trademarks and logos, and its documentation and materials — are owned by Bewandera Labs or our licensors. Using the App doesn't give you any ownership rights over it.</p>
+    </div>
+    <div class="card">
+      <h3>Governing law &amp; dispute resolution</h3>
+      <p>These Terms are governed by the laws of Kenya, without regard to conflict-of-law principles. If a dispute ever comes up, here's the path we'll follow:</p>
+      <ol class="steps">
+        <li><strong>Informal negotiation</strong> — contact us at <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a> so we can try to resolve it directly.</li>
+        <li><strong>Mediation</strong> — if that doesn't resolve things, the dispute goes to mediation in Nairobi, Kenya.</li>
+        <li><strong>Arbitration or litigation</strong> — anything still unresolved is handled by arbitration or the courts of Nairobi, Kenya.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h3>Severability</h3>
+      <p>If any part of these Terms is found invalid or unenforceable, the rest will continue in full force and effect.</p>
+    </div>
+    <div class="card">
+      <h3>Entire agreement</h3>
+      <p>These Terms, together with our Privacy Policy, make up the entire agreement between you and Bewandera Labs regarding the App.</p>
+    </div>
+
+    <div class="contact-card">
+      <div>
+        <h3>Questions about these Terms?</h3>
+        <p>Bewandera Labs typically replies within 48 hours.</p>
+      </div>
+      <a class="btn" href="mailto:bewanderalabs@gmail.com">Email bewanderalabs@gmail.com</a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="icon.png" class="logo logo-sm" alt="PocketPal Logo">
+      PocketPal
+    </div>
+    <div class="footer-links">
+      <a href="./index.html">Home</a>
+      <a href="./privacy-policy.html">Privacy Policy</a>
+      <a href="mailto:bewanderalabs@gmail.com">Contact</a>
+    </div>
+    <p class="footer-fine">Built with care by Bewandera Labs in Nairobi, Kenya. © <span id="year">2026</span> Bewandera Labs. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('siteHeader');
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 8);
+    backToTop.classList.toggle('show', y > 500);
+  }, { passive:true });
+
+  const chips = Array.from(document.querySelectorAll('.chip'));
+  const sections = chips.map(c => document.querySelector(c.getAttribute('href')));
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const idx = sections.indexOf(entry.target);
+        if (idx > -1 && entry.isIntersecting){
+          chips.forEach(c => c.classList.remove('active'));
+          chips[idx].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -50% 0px' });
+    sections.forEach(s => s && io.observe(s));
+  }
+</script>
+</body>
 </html>
