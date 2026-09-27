@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://brighton-wandera.github.io/pocket-pal-legal/terms-of-service.html">
 <title>Terms of Service — PocketPal</title>
 <meta name="description" content="PocketPal's Terms of Service — your license to use the app, Premium billing, and your rights and responsibilities.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,7 +193,8 @@
   .callout ul{margin-top:6px;}
   .callout strong{color:#6E4404;}
 
-  .partner-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:8px;}
+  .card, .callout-body, .contact-card{min-width:0; overflow-wrap:anywhere;}
+  .partner-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr)); gap:14px; margin-top:8px;}
   .partner-card{
     background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md);
     padding:18px 20px; box-shadow:var(--shadow);
@@ -257,17 +259,17 @@
   }
 </style>
 </head>
-<body>
+<body id="top">
 <a href="#main" class="skip-link">Skip to content</a>
 
 <header class="site" id="siteHeader">
   <div class="nav-inner">
-    <a class="brand" href="./index.html" style="text-decoration:none;">
+    <a class="brand" href="https://pocketpal-finance.web.app/" style="text-decoration:none;">
       <img src="icon.png" class="logo" alt="PocketPal Logo">
       PocketPal
     </a>
     <nav class="nav-links">
-      <a href="./index.html">Home</a>
+      <a href="https://pocketpal-finance.web.app/">Home</a>
       <a href="./privacy-policy.html">Privacy</a>
       <a href="./terms-of-service.html" class="current">Terms</a>
     </nav>
@@ -292,8 +294,8 @@
       <p class="lede">These are the terms for using PocketPal — your license to use the app, how Premium billing works, and what happens if something goes wrong. We've kept every legal protection in place, just made it easier to actually read.</p>
       <div class="meta-pills">
         <span class="pill">Effective <strong>January 30, 2026</strong></span>
-        <span class="pill">Last updated <strong>July 4, 2026</strong></span>
-        <span class="pill">Developed by <strong>Bewandera Labs</strong> · Nairobi, Kenya</span>
+        <span class="pill">Last updated <strong>September 27, 2026</strong></span>
+        <span class="pill">Developed by <strong>Bright Wizard</strong> · Nairobi, Kenya</span>
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
@@ -324,8 +326,8 @@
       </div>
       <div class="glance-card">
         <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-        <h3>Your passphrase, your responsibility</h3>
-        <p>We can't recover a forgotten passphrase — there's no reset option, so keep it somewhere safe.</p>
+        <h3>Account and legacy recovery</h3>
+        <p>Current general backups use Google-account recovery. Older backups may still need their original passphrase.</p>
       </div>
       <div class="glance-card">
         <div class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
@@ -352,7 +354,7 @@
     <div class="card">
       <h3>Agreeing to these terms</h3>
       <p>By downloading, installing, or using PocketPal ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you don't agree, please don't use the App.</p>
-      <p>These Terms are a legal agreement between you ("User" or "you") and Bewandera Labs ("we," "us," or "our").</p>
+      <p>These Terms are a legal agreement between you ("User" or "you") and B.E. Wandera Labs ("we," "us," or "our"). PocketPal is developed by Bright Wizard and is a product of B.E. Wandera Labs.</p>
     </div>
     <div class="card">
       <h3>Your license to use PocketPal</h3>
@@ -378,18 +380,18 @@
       <ul>
         <li>Keeping your Google account credentials confidential</li>
         <li>All activity that occurs under your account</li>
-        <li>Creating a strong, unique passphrase to encrypt your data</li>
+        <li>Protecting account access and retaining any passphrase still required by an older backup</li>
       </ul>
     </div>
     <div class="callout">
       <span class="icn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
       <div class="callout-body">
-        <strong class="title">Passphrase responsibility</strong>
+        <strong class="title">Backup recovery</strong>
         <ul>
-          <li>Your passphrase is used to encrypt your financial data</li>
-          <li>We do <strong>NOT</strong> store your passphrase and <strong>cannot</strong> recover it if lost</li>
-          <li>If you forget your passphrase, your encrypted backup data will be permanently inaccessible</li>
-          <li>There is no "forgot password" recovery option, by design, for your security</li>
+          <li>Current general backups are associated with your signed-in Google account and support account-based recovery</li>
+          <li>Older passphrase-protected backups may require the original passphrase before they can be restored or migrated</li>
+          <li>Keep any legacy passphrase until you have confirmed a successful restore and new backup</li>
+          <li>Recovery is not guaranteed if the required account, passphrase or backup is unavailable; Google account recovery is managed by Google</li>
         </ul>
       </div>
     </div>
@@ -420,38 +422,37 @@
       <p>Your use of the App is also governed by our <a href="privacy-policy.html">Privacy Policy</a>. By using the App, you consent to the collection and use of your information as described there.</p>
       <p><strong>Key points:</strong></p>
       <ul>
-        <li>Your financial data is encrypted end-to-end (AES-256-GCM)</li>
-        <li>Backups are stored in your own personal Google Drive</li>
-        <li>We cannot access your encrypted data</li>
+        <li>General cloud backups are encrypted before upload using AES-256-GCM; this is not a zero-knowledge or end-to-end-encryption guarantee against the service operator</li>
+        <li>Current general backups are stored in Firebase; Notebook sync and older general backups use your Google Drive app-data area</li>
+        <li>Household sharing, diagnostics, ads and optional AI have separate data flows explained in the Privacy Policy</li>
         <li>We do not sell your personal information</li>
       </ul>
     </div>
     <div class="card">
       <h3>Premium features</h3>
-      <p>PocketPal Premium is an optional subscription with extra features, which may include:</p>
+      <p>PocketPal Premium is optional. The features and purchase types available to you are shown in the app and Google Play before purchase. Benefits include:</p>
       <ul>
         <li>An ad-free experience</li>
         <li>Advanced analytics and reports</li>
-        <li>Priority customer support</li>
-        <li>Additional cloud storage</li>
+        <li>Premium themes</li>
       </ul>
     </div>
     <div class="card">
       <h3>Billing</h3>
       <ul>
-        <li>Subscriptions are billed through the Google Play Store</li>
-        <li>Charges occur at the start of each billing cycle (monthly or yearly)</li>
-        <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period</li>
+        <li>Premium purchases are billed through the Google Play Store</li>
+        <li>Subscription prices and billing periods are shown at checkout; any one-time offer is identified separately</li>
+        <li>Subscriptions renew unless cancelled before renewal under the terms shown by Google Play; a one-time purchase is not a recurring subscription</li>
         <li>You can manage or cancel your subscription any time in your Google Play Store account settings</li>
       </ul>
     </div>
     <div class="card">
       <h3>Refunds</h3>
-      <p>Refunds are subject to the Google Play Store's refund policy. In general:</p>
+      <p>Refunds depend on the purchase, your region, applicable law and <a href="https://support.google.com/googleplay/answer/15574908?hl=en">Google Play's refund policy</a>. In general:</p>
       <ul>
-        <li>You may request a refund within 48 hours of purchase for first-time subscriptions</li>
-        <li>Contact us at <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a> for refund questions</li>
-        <li>Refunds are processed through the Google Play Store</li>
+        <li>Within 48 hours, you may be eligible to request a refund from Google Play depending on the purchase details; approval is not guaranteed</li>
+        <li>After 48 hours, contact us at <a href="mailto:bewanderalabs@gmail.com">bewanderalabs@gmail.com</a> about eligibility or purchase issues</li>
+        <li>Applicable consumer rights are not limited by this summary</li>
       </ul>
     </div>
   </section>
@@ -480,13 +481,13 @@
     </div>
     <div class="card">
       <h3>Limitation of liability</h3>
-      <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, BEWANDERA LABS SHALL NOT BE LIABLE FOR:</p>
+      <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY LAW, B.E. WANDERA LABS SHALL NOT BE LIABLE FOR:</p>
       <ul>
         <li>Any indirect, incidental, special, or consequential damages</li>
         <li>Loss of profits, data, or business opportunities</li>
         <li>Damages resulting from your use of, or inability to use, the App</li>
         <li>Financial losses due to errors, omissions, or inaccuracies in the App</li>
-        <li>Data loss due to forgotten passphrases (you are solely responsible for remembering your passphrase)</li>
+        <li>Data loss due to loss of required account access or a legacy backup passphrase</li>
       </ul>
       <p style="margin-top:12px;"><strong>Our total liability will not exceed the amount you paid for the App in the past 12 months, or $10 USD, whichever is greater.</strong></p>
     </div>
@@ -497,14 +498,14 @@
         <li>You're responsible for maintaining regular backups of your own data</li>
         <li>We're not liable for data loss due to:
           <ul>
-            <li>Forgotten passphrases</li>
+            <li>Loss of account access or a required legacy passphrase</li>
             <li>Device failure or loss</li>
-            <li>Google Drive service interruptions</li>
+            <li>Firebase or Google Drive service interruptions</li>
             <li>Network connectivity issues</li>
             <li>Uninstalling the App without backing up first</li>
           </ul>
         </li>
-        <li>Encrypted backups cannot be recovered without your passphrase</li>
+        <li>Current recovery requires access to the correct account and a usable backup; older backups may also require their original passphrase</li>
       </ul>
     </div>
   </section>
@@ -518,7 +519,7 @@
       <p>You can stop using the App at any time by:</p>
       <ul>
         <li>Uninstalling the App from your device</li>
-        <li>Deleting your cloud backup from Google Drive</li>
+        <li>Requesting account-linked data and Firebase backup deletion through <a href="mailto:bewanderalabs@gmail.com">support</a>, and removing any Drive copies separately</li>
         <li>Signing out and clearing your local data</li>
       </ul>
     </div>
@@ -536,7 +537,7 @@
       <p>If we modify these Terms, we will:</p>
       <ul>
         <li>Update the "Last Updated" date at the top of this page</li>
-        <li>Notify you via an in-app notification for material changes</li>
+        <li>Provide notice of material changes as required by applicable law</li>
         <li>Treat your continued use of the App after changes as acceptance of the new Terms</li>
       </ul>
       <p>If you don't agree with the modified Terms, please stop using the App.</p>
@@ -545,11 +546,11 @@
       <h3>Third-party services</h3>
       <p>The App integrates with a few third-party services:</p>
       <div class="partner-grid">
-        <div class="partner-card"><h4>Google Drive</h4><p>Used for cloud backup</p></div>
-        <div class="partner-card"><h4>Firebase</h4><p>Used for authentication and crash reporting</p></div>
+        <div class="partner-card"><h4>Google Drive</h4><p>Notebook sync and legacy general backup recovery</p></div>
+        <div class="partner-card"><h4>Firebase</h4><p>Authentication, general backups, household sharing, receipts, messaging, analytics and crash reporting</p></div>
         <div class="partner-card"><h4>Google AdMob</h4><p>Used for advertisements</p></div>
       </div>
-      <p style="margin-top:14px;">Your use of these services is subject to their own terms and policies. We're not responsible for their availability or performance.</p>
+      <p style="margin-top:14px;">Google Play Billing, optional Gemini features, device speech recognition and exchange-rate providers are also described in the Privacy Policy. Your use of these services is subject to their own terms and policies. We're not responsible for their availability or performance.</p>
     </div>
   </section>
 
@@ -560,7 +561,7 @@
 
     <div class="card">
       <h3>Intellectual property</h3>
-      <p>All intellectual property rights in the App — including its software code, design, graphics, and user interface, the "PocketPal" trademarks and logos, and its documentation and materials — are owned by Bewandera Labs or our licensors. Using the App doesn't give you any ownership rights over it.</p>
+      <p>All intellectual property rights in the App — including its software code, design, graphics, and user interface, the "PocketPal" trademarks and logos, and its documentation and materials — are owned by B.E. Wandera Labs or our licensors. Using the App doesn't give you any ownership rights over it.</p>
     </div>
     <div class="card">
       <h3>Governing law &amp; dispute resolution</h3>
@@ -577,15 +578,15 @@
     </div>
     <div class="card">
       <h3>Entire agreement</h3>
-      <p>These Terms, together with our Privacy Policy, make up the entire agreement between you and Bewandera Labs regarding the App.</p>
+      <p>These Terms, together with our Privacy Policy, make up the entire agreement between you and B.E. Wandera Labs regarding the App.</p>
     </div>
 
     <div class="contact-card">
       <div>
         <h3>Questions about these Terms?</h3>
-        <p>Bewandera Labs typically replies within 48 hours.</p>
+        <p>Contact B.E. Wandera Labs at the address below.</p>
       </div>
-      <a class="btn" href="mailto:bewanderalabs@gmail.com">Email bewanderalabs@gmail.com</a>
+      <a class="btn" href="mailto:bewanderalabs@gmail.com">Email support</a>
     </div>
   </section>
 </div>
@@ -598,11 +599,11 @@
       PocketPal
     </div>
     <div class="footer-links">
-      <a href="./index.html">Home</a>
+      <a href="https://pocketpal-finance.web.app/">Home</a>
       <a href="./privacy-policy.html">Privacy Policy</a>
       <a href="mailto:bewanderalabs@gmail.com">Contact</a>
     </div>
-    <p class="footer-fine">Built with care by Bewandera Labs in Nairobi, Kenya. © <span id="year">2026</span> Bewandera Labs. All rights reserved.</p>
+    <p class="footer-fine">Built with care by B.E. Wandera Labs in Nairobi, Kenya. © <span id="year">2026</span> B.E. Wandera Labs. All rights reserved.</p>
   </div>
 </footer>
 
